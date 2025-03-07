@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To do List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+</head>
+
+
+<body>
+    <form id="formList">
+        <div class="lista">
+            <h1>Lista!</h1>
+            <hr>
+            <br>
+            <p>Adicione sua tarefa aqui!</p>
+            <br>
+            <div class="inputPlus">
+                <input type="text" name="" id="inputAdd" placeholder="Adicione sua tarefa aqui!!">
+                <button onclick="" class="plus">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </button>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <div class="search">
+                <input type="text" name="" id="inputSearch" placeholder="O que procura?">
+                <button class="searchImg">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                </button>
+                |
+                |
+                <div>
+                    <label for="filtro"><b>Filtrar:</b></label>
+                    <select id="filtro" name="filtro">
+                        <option value="All">Todos</option>
+                        <option value="pending">Pendentes</option>
+                        <option value="completed">Concluídos</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <hr>
+        </div>
+    </form>
+</body>
+<script src="index.js"></script>
+
+</html>
