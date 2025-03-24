@@ -68,6 +68,10 @@ hr {
     background-color: #fff;
 }
 
+#taskList{
+    list-style-type: none;
+}
+
 @media (max-width: 450px) {
     .lista {
         width: 400px; 

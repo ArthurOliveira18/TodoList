@@ -13,15 +13,27 @@ form.addEventListener('submit', function (ev) {
     const valorComplete = lista.options[2].value
 
 
-    console.log(inputAdd.value)
-    // Limpando o valor do inputAdd
-    inputAdd.value = ""
-
-    function addTask(){
-        
-    }
 
 })
+
+function addTask() {
+
+    console.log(inputAdd.value)
+
+    if (inputAdd.value == "") {
+        alert("O campo de adicionar task está vazio")
+    } else {
+        const li = document.createElement('li')
+        li.textContent = inputAdd.value
+
+        const taskList = document.getElementById('taskList')
+        taskList.appendChild(li)
+
+        inputAdd.value = ""
+    }
+
+
+}
 
 
 

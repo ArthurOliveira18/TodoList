@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 
-
 <body>
     <form id="formList">
         <div class="lista">
@@ -20,15 +19,17 @@
             <br>
             <div class="inputPlus">
                 <input type="text" name="" id="inputAdd" placeholder="Adicione sua tarefa aqui!!">
-                <button onclick="" class="plus">
-                    <span class="material-symbols-outlined">
-                        add
-                    </span>
+                <button type="button" class="plus" onclick="addTask()">
+                    <span class="material-symbols-outlined">add</span>
                 </button>
             </div>
             <br>
+            <!-- Aqui é onde as tarefas vão aparecer -->
+            <ul id="taskList"></ul>
             <hr>
             <br>
+
+            
 
             <div class="search">
                 <input type="text" name="" id="inputSearch" placeholder="O que procura?">
@@ -53,6 +54,7 @@
         </div>
     </form>
 </body>
+
 <script src="index.js"></script>
 
 </html>
