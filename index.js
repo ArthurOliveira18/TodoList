@@ -15,6 +15,8 @@ form.addEventListener('submit', function (ev) {
 
 
 })
+// Criando o id para excluir apenas aquela tarefa com o id especifo.
+let taskId = 1;  // Variável para contar as tarefas
 
 function addTask() {
 

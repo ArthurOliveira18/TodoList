@@ -67,6 +67,11 @@ hr {
     justify-content: center;
     background-color: #fff;
 }
+.taskListDiv{
+    display: flex;
+    justify-content: baseline;
+    width: 80%;
+}
 
 #taskList{
     list-style-type: none;
