@@ -11,7 +11,7 @@ form.addEventListener('submit', function (ev) {
     const valorAll = lista.options[0].value
     const valorPending = lista.options[1].value
     const valorComplete = lista.options[2].value
-    
+
 
 
 })
@@ -42,7 +42,7 @@ function addTask() {
 
         // Criando a estrutura para salvar o ID e o texto do usuario
         const task = {
-            id:taskId,
+            id: taskId,
             text: inputAdd.value
         }
         // Toda vez que clico para add tarefa, ele incrementa mais um no ID e depois salva em um array
@@ -50,23 +50,20 @@ function addTask() {
         tasks.push(task)
 
         //Salvando o array tasks no local storage 
-        localStorage.setItem("tasks" , JSON.stringify(tasks))
-        
-        
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+
+
         const infoL = localStorage.getItem("tasks")
         console.log(infoL)
-        
+
+        // localStorage.clear()
 
         renderTasks();
 
         inputAdd.value = ""
 
-       
-        
+
     }
-
-    renderTasks();
-
 
 }
 
@@ -79,11 +76,19 @@ function renderTasks() {
     // Iterar sobre cada elemento da lista e pegar cada elemento e mostrar na tela
     tasks.forEach(task => {
         const li = document.createElement('li')
-        li.textContent = `${task.id} : ${task.text}`
+        //  Criando um elemento <span> para o ícone do Google Fonts (Material Icons)
+        const icon = document.createElement('span')
+        icon.className = "material-icons"
+        icon.textContent = "delete";
+
+        li.textContent = `${task.id} : ${task.text} `
         taskList.appendChild(li)
+        // Detalhe importante, é que o appendChild faz aparecer depois. Ou seja? se eu colocar prepend e nao appendChild, o prepend vai fazer aparecer antes
+        li.appendChild(icon)
     });
 }
 
+renderTasks();
 
 
 
