@@ -61,8 +61,6 @@ function addTask() {
         renderTasks();
 
         inputAdd.value = ""
-
-
     }
 
 }
@@ -85,10 +83,26 @@ function renderTasks() {
         taskList.appendChild(li)
         // Detalhe importante, é que o appendChild faz aparecer depois. Ou seja? se eu colocar prepend e nao appendChild, o prepend vai fazer aparecer antes
         li.appendChild(icon)
+
     });
 }
 
 renderTasks();
+
+taskList.addEventListener('click', function (event) {
+    const clickedLi =
+
+    
+});
+
+
+function deleteTask(){
+
+}
+
+
+
+
 
 
 
